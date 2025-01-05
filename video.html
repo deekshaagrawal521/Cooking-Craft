@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Video</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="video.css">
+</head>
+<body>
+    <header>
+        <h1>CookCraft</h1>
+    </header>
+ 
+    <nav>
+        <a href="index.html"><button class="nav-btn">Home</button></a>
+        <a href="video.html"><button class="nav-btn">Recipe Video</button></a>
+    </nav>
+    
+
+    <main>
+        <!-- Search Form for Recipe -->
+        <section id="recipe-search">
+            <h2>Search for a Recipe Video</h2>
+            <form id="search-form">
+                <input type="text" id="recipe-name" placeholder="Enter recipe name" required>
+                <button type="button" id="search-btn">Search</button>
+            </form>
+        </section>
+
+        <!-- Container for displaying the YouTube video -->
+        <section id="recipe-video">
+            <h2>Recipe Video</h2>
+            <div id="youtube-video-container"></div> <!-- YouTube video will be displayed here -->
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Recipe Finder App</p>
+    </footer>
+
+    <script src="video.js"></script>
+</body>
+</html>

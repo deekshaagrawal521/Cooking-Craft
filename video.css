@@ -1,0 +1,65 @@
+/* Container styling */
+#youtube-video-container {
+    margin-top: 40px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8e2fc, #e4cdf7); /* Gradient background for a fresh look */
+    border-radius: 12px; /* Rounded corners */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    min-height: 350px; /* Space for video */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+    border: 2px solid transparent; /* For adding hover border animation */
+}
+
+/* Hover effects on the container */
+#youtube-video-container:hover {
+    transform: scale(1.05); /* Slight zoom */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* More depth on hover */
+    background: linear-gradient(135deg, #e8aef2, #b88ad3); /* Vibrant gradient change */
+    border-color: #7a52a0; /* Add a border color on hover */
+}
+
+/* Video iframe styling */
+#youtube-video-container iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 8px; /* Rounded corners for the iframe */
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Hover effects on the iframe */
+#youtube-video-container iframe:hover {
+    transform: scale(1.1); /* Slight zoom on iframe */
+    filter: brightness(1.1); /* Brightens the video on hover */
+}
+
+/* Add a bounce animation on hover */
+#youtube-video-container:hover iframe {
+    animation: bounce 0.5s;
+}
+
+/* Keyframes for the bounce animation */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsiveness for mobile devices */
+@media screen and (max-width: 768px) {
+    #youtube-video-container {
+        padding: 15px;
+        margin-top: 20px;
+    }
+
+    #youtube-video-container iframe {
+        max-width: 100%; /* Allow iframe to take full width */
+        height: auto; /* Adjust height for smaller screens */
+    }
+}

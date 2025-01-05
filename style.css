@@ -1,0 +1,376 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling with a smooth gradient and transition */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #7b8894, #76926b);
+    color: #333;
+    transition: background-color 0.3s ease;
+    padding-bottom: 50px;
+    overflow-x: hidden;
+}
+/* Navigation container styling */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    gap: 20px; /* Space between the buttons */
+}
+
+/* Styling for navigation buttons */
+.nav-btn {
+    background: linear-gradient(to right, #5cb85c, #4cae4c);
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+.nav-btn:hover {
+    background: linear-gradient(to right, #4cae4c, #31b0d5);
+    transform: translateY(-2px);
+}
+
+.nav-btn:active {
+    background-color: #2094b2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Anchor links styling (optional, if needed) */
+nav a {
+    text-decoration: none; /* Removes underline */
+}
+
+/* Header styling with gradient and subtle hover effect */
+header {
+    background: linear-gradient(to right, #5cb85c, #4cae4c);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-bottom: 3px solid #4cae4c;
+    animation: fadeIn 1s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden; /* Ensures the hover effect stays contained */
+}
+
+/* Add a gradient highlight on hover */
+header:hover {
+    background: linear-gradient(to right, #a4d5e3, #afcfd7);
+    transition: background 0.5s ease-in-out;
+}
+
+/* Styling for the header title */
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 1; /* Ensures text stays above the effects */
+}
+
+/* Stylish line animation in the header */
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #97b0b6, #5cb85c);
+    animation: slideIn 2s infinite linear;
+}
+
+/* Slide animation for the decorative line */
+@keyframes slideIn {
+    from {
+        left: -100%;
+    }
+    to {
+        left: 100%;
+    }
+}
+
+/* Subtle shadow hover effect */
+header:hover h1 {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Optional: Add additional text styling */
+header p {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #f8f9fa;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+/* Main section with centered content */
+main {
+    padding: 20px;
+    animation: fadeInUp 1s ease-in-out;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Headings styling */
+h1, h2 {
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+/* Search Section with hover effect */
+#search-section {
+    text-align: center;
+    margin-bottom: 30px;
+    transform: scale(1);
+    transition: transform 0.3s ease-in-out;
+}
+
+#search-section:hover {
+    transform: scale(1.05);
+}
+
+/* Search form input and button styles */
+#search-form input {
+    width: 70%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #5cb85c;
+    border-radius: 30px;
+    margin-right: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#search-form input:focus {
+    border-color: #31b0d5;
+    outline: none;
+    background: #e6f7ff;
+}
+
+#search-form button {
+    padding: 12px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background: linear-gradient(to right, #5cb85c, #4cae4c);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#search-form button:hover {
+    background: linear-gradient(to right, #4cae4c, #31b0d5);
+    transform: translateY(-2px);
+}
+
+#search-form button:active {
+    background-color: #2094b2;
+}
+
+/* Recipe Results Grid */
+#recipe-results {
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+/* Recipe Card with hover effect */
+.recipe-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.recipe-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+}
+
+/* Recipe card image with hover effect */
+.recipe-card img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.recipe-card img:hover {
+    transform: scale(1.1);
+    filter: brightness(1.1);
+}
+
+/* Recipe Card heading */
+.recipe-card h3 {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+/* Recipe Card button */
+.recipe-card button {
+    margin-top: 10px;
+    background: linear-gradient(to right, #5bc0de, #31b0d5);
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.recipe-card button:hover {
+    background: linear-gradient(to right, #31b0d5, #2094b2);
+    transform: translateY(-2px);
+}
+
+/* Recipe Detail Card */
+.recipe-detail-card {
+    background: white;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.recipe-detail-card h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #5cb85c;
+    text-align: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.recipe-detail-card h4 {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #4cae4c;
+}
+
+/* Recipe Detail List */
+.recipe-detail-card ul {
+    list-style-type: none;
+    padding-left: 20px;
+}
+
+.recipe-detail-card li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Recipe Detail Card button */
+.recipe-detail-card button {
+    margin-top: 20px;
+    background: linear-gradient(to right, #f0ad4e, #ec971f);
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.recipe-detail-card button:hover {
+    background: linear-gradient(to right, #ec971f, #d58512);
+    transform: translateY(-2px);
+}
+
+/* Shopping List Section */
+#shopping-list ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Shopping List Item Styling */
+#shopping-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    background: #fff;
+    padding: 12px;
+    border-radius: 30px;
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#shopping-list li:hover {
+    background: #dff0d8;
+    transform: translateY(-2px);
+}
+
+/* Shopping List Button Styling */
+#shopping-list li button {
+    background: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#shopping-list li button:hover {
+    background: #c9302c;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    font-size: 14px;
+    border-top: 3px solid #444;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
